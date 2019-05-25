@@ -1,0 +1,88 @@
+#PF-Prac-1
+def add_string(str1):
+ length=len(str1)
+ if(length>2):
+     if(str1[-3:]=='ing):
+         str1+='ly'
+    else:
+        str1+='ing'
+  return str1
+
+print(add_string('sleep'))
+print(add_string('amazing'))
+print(add_string('is'))
+
+
+#PF-Prac-2
+def bracket_pattern(str):
+    length=len(str)
+    c=0
+    if(str[0]==')' or str[-1:]=='('):
+        return False
+    else:
+        for i in range(0,length):
+            if(i==')'):
+                c+=1
+            else:
+                c+=1
+        if(c%2==0):
+            return True
+    
+print(bracket_pattern('()((())())'))
+
+
+#PF-Prac-3
+def create_new_dictionary(prices):
+    new_dic={}
+    for key in prices:
+        if(prices[key]>200):
+            new_dic.__setitem__(key,prices[key])
+    
+    return new_dic
+
+prices = { 'ACME': 45.23,'AAPL': 612.78,'IBM': 205.55,'HPQ': 37.20,'FB': 10.75}
+print(create_new_dictionary(prices)) 
+
+
+#PF-Prac-4
+def find_nine(nums):
+    for i in range(0,4):
+        if nums[i]==9:
+            return True
+            break
+        
+    return False
+    
+nums=[1,9,4,5,6]
+print(find_nine(nums))
+
+
+#PF-Prac-5
+def count_digits_letters(sentence):
+    result_list=[]
+    c1=0
+    c2=0
+    for i in sentence:
+        if(i.isalpha()):
+            c1+=1
+        if(i.isdigit()):
+            c2+=1
+    result_list.append(c1)
+    result_list.append(c2)
+    return result_list
+
+sentence="Infosys Mysore 570027"
+print(count_digits_letters(sentence))
+
+
+#PF-Prac-6
+def list123(nums):
+    needed=[1,2,3]
+    if str(needed)[1:-1] in str(nums):
+        return True
+    return False
+
+    
+
+nums=[1,2,3,4,5]
+print(list123(nums))
