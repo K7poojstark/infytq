@@ -14,20 +14,15 @@ print(add_string('is'))
 
 
 #PF-Prac-2
-def bracket_pattern(str):
-    length=len(str)
-    c=0
-    if(str[0]==')' or str[-1:]=='('):
+def bracket_pattern(input_str):
+    length=len(input_str)
+    if(length%2!=0):
+        return False
+    elif(input_str[0]==')'or input_str[-1:]=='('):
         return False
     else:
-        for i in range(0,length):
-            if(i==')'):
-                c+=1
-            else:
-                c+=1
-        if(c%2==0):
-            return True
-    
+        return True 
+print(bracket_pattern(')()((()()))'))
 print(bracket_pattern('()((())())'))
 
 
@@ -46,8 +41,8 @@ print(create_new_dictionary(prices))
 
 #PF-Prac-4
 def find_nine(nums):
-    for i in range(0,4):
-        if nums[i]==9:
+    for i in range(0,len(nums)):
+        if(nums[i]==9 and i<4):
             return True
             break
         
@@ -181,7 +176,7 @@ verbs=["love", "play"]
 objects=["Hockey","Football"]
 print(generate_sentences(subjects,verbs,objects))
 
-
+#PF-Prac-14
 def find_five_digit():
     num2=0
     num3=0
