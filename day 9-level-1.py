@@ -37,6 +37,9 @@ def create_new_dictionary(prices):
 
 prices = { 'ACME': 45.23,'AAPL': 612.78,'IBM': 205.55,'HPQ': 37.20,'FB': 10.75}
 print(create_new_dictionary(prices)) 
+	
+	
+
 
 
 #PF-Prac-4
@@ -323,3 +326,85 @@ def exchange_list(number_list):
 number_list=[1,2,3,4,5,6]
 print(exchange_list(number_list))
 
+#PF-Prac-31
+def sum_of_elements(num_list,number):
+    a=len(num_list)
+    result_sum=0
+    for i in range(1,a-1):
+        if(num_list[i-1]!=number and num_list[i+1]!=number and num_list[i]!=number):
+            result_sum+=num_list[i]
+    if(num_list[1]!=number and num_list[0]!=number):
+        result_sum+=num_list[0]
+    if(num_list[a-2]!=number and num_list[a-1]!=number):
+        result_sum+=num_list[a-1]
+    return result_sum
+      
+num_list=[1,2,1,2]
+number=2
+print(sum_of_elements(num_list, number))
+
+	
+#PF-Prac-37
+def sum_of_list(num_list):
+    if(len(num_list)>1):
+        return num_list[0] + sum_of_list(num_list[1:])
+    else:
+        return num_list[0]
+num_list=[44,23,77,11,89,3]
+result=sum_of_list(num_list)
+print("Sum of the elements:",result)
+
+	
+#PF-Prac-38
+r,c=map(int,input().split())
+l=[]
+for i in range(0,r):
+    n=[]
+    for j in range(0,c):
+        temp=str(i)+','+str(j)
+        n.append(temp)
+    l.append(n)
+    print("[",end="")
+    print(*l,sep='\n',end="")
+    print("]")
+	
+	
+#PF-tryout 46	
+n=list(map(int,input().split()))
+print(0,end="")
+for i in range(1,len(n)):
+    print(n[i-1]*2,end="")
+
+	
+#PF-Tryout 46
+
+def doublePreceding (values):
+    if len(values) > 0:
+        previous = values[0]
+        values[0] = 0
+        for idx in range(1, len(values)):
+            previous1 = values[idx]
+            values[idx] = 2 * previous
+            previous=previous1
+    return values
+    
+print(doublePreceding([3,8,2]))
+
+
+#46_hackerrank
+b=input()
+b=b.split(" ")
+def double(v):
+    if len(v) > 0:
+        pre = int(v[0])
+        v[0] = 0
+        for i in range(1, len(v)):
+            temp=int(v[i])
+            v[i] = 2 * int(pre)
+            pre = temp
+    return v
+bb=double(b)
+for i in bb:
+    print(i,end=" ")
+
+	
