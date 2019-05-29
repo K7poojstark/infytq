@@ -45,6 +45,19 @@ num2=20
 print(check_numbers(num1, num2))
 
 
+#PF-Tryout P-30
+def number_lines(fname):
+    num_lines = 0
+    with open(fname, 'r') as f:
+        for line in f:
+            num_lines += 1
+        return num_lines
+                      
+file_path="data1.txt"
+print(number_lines(file_path))
+
+
+
 
 #PF-Prac-32
 def check_squares(number):
