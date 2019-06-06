@@ -5,3 +5,11 @@ INSERT INTO Salesman(SId,SName,Location) VALUES (11,'Elizabeth','London');
 EX-11
 INSERT INTO Product VALUES(110,'Bat',50,'Sports',NULL);
 
+EX-12
+SELECT * FROM Product
+
+EX-13
+SELECT prodid,price,category FROM Product
+
+EX-14
+SELECT DISTINCT Category FROM Product
