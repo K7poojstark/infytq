@@ -41,6 +41,18 @@ DELETE FROM SaleDetail WHERE QUANTITY>5
 ASS-16
 INSERT INTO Article(ArCode,ArName,Rate,Quantity,Class) VALUES ('A1001','Mouse',500,0,'C')
 
+ASS-17(ERROR)
+INSERT INTO Store(StoreName,Location,ManagerName) VALUES('Loyal World','Infy Campus,Mysore','Rohan Kumar');
 
+ASS-18
+INSERT INTO
+Bill(BillNo,StoreName,Shopperid,ArCode,Amount,BillDate,Quantity) VALUES(1001,'Loyal World',101,'A1001',1000,'20-OCT-15',2); 
 
+ASS-19
+INSERT INTO Supplier(Supplierid,Name,ContactNo,City) VALUES ('S501','Avaya Ltd',9012345678,'Mysore');
 
+ASS-21(ERROR)
+SELECT quotationid,sname,itemcode,quotedprice,qdate,qstatus FROM Quotation WHERE QSTATUS='Rejected';
+
+ASS-22(ERROR)
+SELECT quotationid,sname,itemcode,quotedprice,qdate,qstatus FROM Quotation WHERE QSTATUS NOT IN 'Accepted';
