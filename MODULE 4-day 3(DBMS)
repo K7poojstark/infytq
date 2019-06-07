@@ -56,3 +56,9 @@ SELECT quotationid,sname,itemcode,quotedprice,qdate,qstatus FROM Quotation WHERE
 
 ASS-22(ERROR)
 SELECT quotationid,sname,itemcode,quotedprice,qdate,qstatus FROM Quotation WHERE QSTATUS NOT IN 'Accepted';
+
+ASS-26
+SELECT DISTINCT Designation,Salary FROM EmpDetails;
+
+ASS-27
+SELECT ItemCode,Descr,Price FROM Item;
