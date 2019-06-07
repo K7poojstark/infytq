@@ -41,6 +41,6 @@ DELETE FROM SaleDetail WHERE QUANTITY>5
 ASS-16
 INSERT INTO Article(ArCode,ArName,Rate,Quantity,Class) VALUES ('A1001','Mouse',500,0,'C')
 
-INSERT INTO Shopper(ShopperId,ShopperName,Gender,MobileNo,Address) VALUES (101,'Mark Jane','M',1234567890,'Allen Street,New York')
+
 
 
