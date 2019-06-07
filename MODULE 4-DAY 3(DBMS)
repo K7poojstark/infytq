@@ -31,3 +31,16 @@ UPDATE Product SET PRICE=50 WHERE CATEGORY='Apparel' AND PDESC='Trouser'
 
 EX-20
 UPDATE Salesman SET SNAME='Jenny',LOCATION='Bristol' WHERE SID=3
+
+EX-21
+DELETE FROM SaleDetail WHERE SALEID='1004'
+
+EX-22
+DELETE FROM SaleDetail WHERE QUANTITY>5
+
+ASS-16
+INSERT INTO Article(ArCode,ArName,Rate,Quantity,Class) VALUES ('A1001','Mouse',500,0,'C')
+
+INSERT INTO Shopper(ShopperId,ShopperName,Gender,MobileNo,Address) VALUES (101,'Mark Jane','M',1234567890,'Allen Street,New York')
+
+
