@@ -54,8 +54,7 @@ INSERT INTO Supplier(Supplierid,Name,ContactNo,City) VALUES ('S501','Avaya Ltd',
 ASS-21(ERROR)
 SELECT quotationid,sname,itemcode,quotedprice,qdate,qstatus FROM Quotation WHERE QSTATUS='Rejected';
 
-ASS-22(ERROR)
-SELECT quotationid,sname,itemcode,quotedprice,qdate,qstatus FROM Quotation WHERE QSTATUS NOT IN 'Accepted';
+
 
 ASS-26
 SELECT DISTINCT Designation,Salary FROM EmpDetails;
