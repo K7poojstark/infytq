@@ -3,3 +3,9 @@ SELECT prodid,category,price,discount FROM Product ORDER BY category DESC,price 
 
 Ex-28
 SELECT prodid,category,discount FROM Product WHERE category='Sports' OR category='Apparel' ORDER BY Category, Discount;
+
+EX-29
+SELECT TO_CHAR(SLDATE,'Month') AS MONTH, COUNT(*) AS NUMBER_SALE FROM Sale GROUP BY(TO_CHAR(SLDATE,'Month'))
+ORDER BY NUMBER_SALE DESC;
+
+SELECT PRODID,COUNT(*) AS QTY_SOLD FROM SaleDetail GROUP BY QUANTITY
