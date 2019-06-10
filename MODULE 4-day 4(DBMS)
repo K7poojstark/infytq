@@ -1,0 +1,5 @@
+EX-27
+SELECT prodid,category,price,discount FROM Product ORDER BY category DESC,price ASC;
+
+Ex-28
+SELECT prodid,category,discount FROM Product WHERE category='Sports' OR category='Apparel' ORDER BY Category, Discount;
